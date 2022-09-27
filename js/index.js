@@ -25,12 +25,11 @@ function calculateAll() {
   //   let sumTotal = updateSubtotal(eachProduct)
   //   console.log(sumTotal)
   // })
-
+  let sum = 0;
   for (let i = 0; i < allProduct.length; i++){
-    let sum = 0;
-    sum = sum + updateSubtotal(allProduct)
-    console.log(sum);
-  }
+    sum = sum + updateSubtotal(allProduct[i])
+   
+  } return sum
   
   
   
