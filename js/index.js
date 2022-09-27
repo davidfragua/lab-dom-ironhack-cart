@@ -27,9 +27,11 @@ function calculateAll() {
 
   // ITERATION 3
 
-  let totalValue = Number(document.querySelector('.total-value span').innerHTML)
+  let totalValue = Number(document.querySelector('.total-value span').innerText) // no funciona. estoy investigando
 
   totalValue = sum;
+
+
   return sum;
 }
 
@@ -39,6 +41,7 @@ function removeProduct(event) {
   const target = event.currentTarget;
   console.log('The target in remove is:', target);
   //... your code goes here
+  event.target.remove()
 }
 
 // ITERATION 5
@@ -52,4 +55,6 @@ window.addEventListener('load', () => {
   calculatePricesBtn.addEventListener('click', calculateAll);
 
   //... your code goes here
+  const removeBtn = document.getElementById(`product`);
+  removeBtn.addEventListener("click", removeProduct);
 });
